@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 <title>connquerr — Roblox Backend Developer</title>
-<meta name="description" content="Roblox developer specialized in backend systems — anti-cheat, economy, networking, and tooling.">
+<meta name="description" content="Roblox backend developer — data systems, economies, anti-cheat, and server logic.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -40,85 +40,86 @@
 <main id="top">
 
   <section class="hero">
-    <p class="hero-tag">ROBLOX DEVELOPER</p>
+    <p class="hero-tag">ROBLOX BACKEND DEVELOPER</p>
     <h1 class="hero-title">
-      I script the stuff<br>
-      players never <span class="accent">see directly.</span>
+      I build data systems,<br>
+      progression, and <span class="accent">anti-cheat.</span>
     </h1>
     <p class="hero-sub">
-      Economy systems, anti-cheat, server logic — the parts of a game that
-      have to just work, every time, no matter how many people are online.
+      Most of what I do is preventing problems before players ever notice them —
+      broken saves, exploited currency, desynced state.
     </p>
     <div class="hero-actions">
-      <a href="#projects" class="btn btn-primary">View Projects</a>
+      <a href="#projects" class="btn btn-primary">Games I've worked on</a>
       <a href="#contact" class="btn btn-ghost">Get in Touch</a>
     </div>
     <div class="hero-stats">
-      <div class="stat">
-        <span class="stat-num">Server-side</span>
-        <span class="stat-label">Mostly what I do</span>
-      </div>
       <div class="stat">
         <span class="stat-num">Lua / Luau</span>
         <span class="stat-label">Daily driver</span>
       </div>
       <div class="stat">
-        <span class="stat-num">Studio + MCP</span>
-        <span class="stat-label">How I build</span>
+        <span class="stat-num">ProfileService</span>
+        <span class="stat-label">Player data</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">MemoryStoreService</span>
+        <span class="stat-label">Cross-server state</span>
       </div>
     </div>
   </section>
 
   <section class="section" id="about">
-    <p class="section-label">01 / About</p>
-    <h2 class="section-title">Who I am</h2>
+    <h2 class="section-title">About</h2>
     <p class="about-text">
-      I make Roblox games, mostly working on the side players don't think about —
-      saving data right, handling money/currency without it breaking, catching
-      cheaters before they ruin a server, that kind of thing. I'm picky about my
-      code: small targeted fixes over big rewrites, nothing fancy for the sake
-      of it, just stuff that holds up when a few thousand people are playing at once.
+      I mostly work on backend systems — data, progression, anti-cheat, currencies,
+      rewards, things that have to keep working after 10,000 joins. I don't really
+      enjoy rewriting everything or building giant frameworks. I'd rather fix the
+      actual problem and keep the system simple than make it "scalable" for a
+      scale that doesn't exist yet.
+    </p>
+    <p class="about-text" style="margin-top: 18px;">
+      One of the harder bugs I've dealt with was a data duplication issue caused
+      by players disconnecting mid-purchase. Took a while to track down, the fix
+      was about 20 lines once I found it.
     </p>
   </section>
 
   <section class="section" id="skills">
-    <p class="section-label">02 / Skills</p>
-    <h2 class="section-title">What I work with</h2>
+    <h2 class="section-title">What I Build</h2>
     <div class="skills-grid">
       <div class="skill-card">
-        <h3>Economy Systems</h3>
-        <p>Data saving with ProfileService, passive income, offline earnings, prestige, upgrade trees.</p>
+        <h3>Player Data</h3>
+        <p>ProfileService saves, session locking, migration scripts when the schema changes.</p>
       </div>
       <div class="skill-card">
         <h3>Anti-Cheat</h3>
-        <p>Catching exploiters in real time — heartbeat checks, character monitoring, instant alerts.</p>
+        <p>Speed/fly detection, teleport validation, movement sanity checks, instant flagging.</p>
+      </div>
+      <div class="skill-card">
+        <h3>Economy</h3>
+        <p>Passive income, prestige resets, daily rewards, gamepasses that actually persist correctly.</p>
+      </div>
+      <div class="skill-card">
+        <h3>Server Logic</h3>
+        <p>Ownership/possession tracking, hitbox detection, anything that has to be server-authoritative.</p>
       </div>
       <div class="skill-card">
         <h3>Networking</h3>
-        <p>MemoryStoreService, RemoteEvents, keeping the server in charge so clients can't fake things.</p>
+        <p>MemoryStoreService, RemoteEvents, keeping clients from being able to fake state.</p>
       </div>
       <div class="skill-card">
-        <h3>Gameplay Logic</h3>
-        <p>Server-driven mechanics, ownership/possession tracking, hitbox detection, physics tools.</p>
-      </div>
-      <div class="skill-card">
-        <h3>Tooling</h3>
-        <p>Studio-MCP workflows and small custom tools that make iterating on a game faster.</p>
-      </div>
-      <div class="skill-card">
-        <h3>Data Integrity</h3>
-        <p>Attribute-based state, quests, rewards, streaks — stuff that has to survive a bad connection.</p>
+        <h3>Quests & Streaks</h3>
+        <p>Attribute-based progress tracking that survives disconnects and bad timing.</p>
       </div>
     </div>
   </section>
 
   <section class="section" id="clips">
-    <p class="section-label">03 / Clips</p>
-    <h2 class="section-title">Systems in action</h2>
-    <p class="section-sub">Short clips of backend systems running in live gameplay.</p>
+    <h2 class="section-title">Videos</h2>
+    <p class="section-sub">Clips of systems running in actual gameplay, not staged demos.</p>
 
     <div class="clips-grid" id="clipsGrid">
-      <!-- Duplicate this article block for each new clip. Swap the src and caption. -->
       <article class="clip-card">
         <div class="clip-video-wrap">
           <video
@@ -130,8 +131,8 @@
           </video>
         </div>
         <div class="clip-info">
-          <h3>Clip 1</h3>
-          <p>Add a caption here.</p>
+          <h3>Server-side system test</h3>
+          <p>Editable — say what's actually happening here.</p>
         </div>
       </article>
 
@@ -146,8 +147,8 @@
           </video>
         </div>
         <div class="clip-info">
-          <h3>Clip 2</h3>
-          <p>Add a caption here.</p>
+          <h3>Gameplay logic in action</h3>
+          <p>Editable — say what's actually happening here.</p>
         </div>
       </article>
 
@@ -163,8 +164,8 @@
           </iframe>
         </div>
         <div class="clip-info">
-          <h3>Clip 3</h3>
-          <p>Add a caption here.</p>
+          <h3>Full system walkthrough</h3>
+          <p>Editable — say what's actually happening here.</p>
         </div>
       </article>
 
@@ -179,8 +180,8 @@
           </video>
         </div>
         <div class="clip-info">
-          <h3>Clip 4</h3>
-          <p>Add a caption here.</p>
+          <h3>Economy/progression test</h3>
+          <p>Editable — say what's actually happening here.</p>
         </div>
       </article>
 
@@ -195,8 +196,8 @@
           </video>
         </div>
         <div class="clip-info">
-          <h3>Clip 5</h3>
-          <p>Add a caption here.</p>
+          <h3>Anti-cheat catching an exploit</h3>
+          <p>Editable — say what's actually happening here.</p>
         </div>
       </article>
 
@@ -211,8 +212,8 @@
           </video>
         </div>
         <div class="clip-info">
-          <h3>Clip 6</h3>
-          <p>Add a caption here.</p>
+          <h3>Server-validated mechanic</h3>
+          <p>Editable — say what's actually happening here.</p>
         </div>
       </article>
 
@@ -227,16 +228,15 @@
           </video>
         </div>
         <div class="clip-info">
-          <h3>Clip 7</h3>
-          <p>Add a caption here.</p>
+          <h3>Data/state sync test</h3>
+          <p>Editable — say what's actually happening here.</p>
         </div>
       </article>
     </div>
   </section>
 
   <section class="section" id="projects">
-    <p class="section-label">04 / Projects</p>
-    <h2 class="section-title">Selected work</h2>
+    <h2 class="section-title">Games I've worked on</h2>
     <div class="projects-grid">
       <a href="https://www.roblox.com/games/126281114516636/Guess-The-Pin" target="_blank" rel="noopener noreferrer" class="project-card">
         <div class="project-top">
@@ -287,9 +287,8 @@
   </section>
 
   <section class="section contact-section" id="contact">
-    <p class="section-label">05 / Contact</p>
-    <h2 class="section-title">Let's work together</h2>
-    <p class="section-sub">Open to backend-focused Roblox collaborations and contract work.</p>
+    <h2 class="section-title">Contact</h2>
+    <p class="section-sub">Open to backend work and collabs on existing projects.</p>
     <div class="contact-grid">
       <a href="https://discord.com/users/consznn" target="_blank" rel="noopener noreferrer" class="contact-card">
         <div class="contact-icon" aria-hidden="true">
