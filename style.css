@@ -214,11 +214,23 @@ main { position: relative; z-index: 1; }
 
 .section-label {
   font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
+  font-weight: 700;
+  letter-spacing: 0.12em;
   color: var(--accent);
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   text-transform: uppercase;
+  font-family: var(--font-display);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-label::after {
+  content: "";
+  flex: 1;
+  max-width: 64px;
+  height: 1px;
+  background: var(--accent-dim);
 }
 
 .section-title {
@@ -389,6 +401,27 @@ main { position: relative; z-index: 1; }
   transition: border-color 0.2s ease, transform 0.2s var(--ease), box-shadow 0.2s ease;
 }
 
+.skill-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-dim);
+  border-radius: 11px;
+  color: var(--accent);
+  margin-bottom: 18px;
+  transition: background 0.2s ease, transform 0.2s var(--ease);
+}
+
+.skill-icon svg { width: 22px; height: 22px; }
+
+.skill-card:hover .skill-icon {
+  background: var(--accent-dim);
+  transform: scale(1.06);
+}
+
 .skill-card:hover {
   border-color: var(--accent-dim);
   transform: translateY(-3px);
@@ -487,7 +520,9 @@ main { position: relative; z-index: 1; }
 .project-top { margin-bottom: 14px; }
 
 .project-tag {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.05em;
@@ -495,8 +530,28 @@ main { position: relative; z-index: 1; }
   color: var(--accent);
   background: var(--accent-soft);
   border: 1px solid var(--accent-dim);
-  padding: 5px 10px;
+  padding: 5px 10px 5px 8px;
   border-radius: 999px;
+}
+
+.project-tag::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 0 var(--accent-dim);
+  animation: live-pulse 2.2s ease-out infinite;
+}
+
+@keyframes live-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(94,230,176,0.55); }
+  70% { box-shadow: 0 0 0 6px rgba(94,230,176,0); }
+  100% { box-shadow: 0 0 0 0 rgba(94,230,176,0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-tag::before { animation: none; }
 }
 
 .project-card h3 {
