@@ -2,33 +2,247 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio - Test Page</title>
-<style>
-  body {
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #0d0d0d;
-    color: #f0f0f0;
-    font-family: system-ui, sans-serif;
-    text-align: center;
-  }
-  h1 {
-    font-size: 2rem;
-    border: 1px solid #333;
-    padding: 2rem 3rem;
-    border-radius: 12px;
-    background: #161616;
-  }
-  span {
-    color: #4ade80;
-  }
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>connquerr — Roblox Backend Developer</title>
+<meta name="description" content="Roblox developer specialized in backend systems — anti-cheat, economy, networking, and tooling.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>It works! <span>✓</span><br>GitHub Pages is live.</h1>
+
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="bg-glow" aria-hidden="true"></div>
+
+<header class="nav">
+  <a href="#top" class="nav-brand">connquerr<span class="dot">.</span></a>
+  <nav class="nav-links">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#clips">Clips</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact" class="nav-cta">Contact</a>
+  </nav>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#clips">Clips</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<main id="top">
+
+  <section class="hero">
+    <p class="hero-tag">ROBLOX DEVELOPER</p>
+    <h1 class="hero-title">
+      Backend systems<br>
+      that hold up <span class="accent">under load.</span>
+    </h1>
+    <p class="hero-sub">
+      I build server-side architecture for Roblox games — economy systems, anti-cheat,
+      networking, and the infrastructure most players never see but every game depends on.
+    </p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn btn-primary">View Projects</a>
+      <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-num">Backend</span>
+        <span class="stat-label">Primary Focus</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">Lua / Luau</span>
+        <span class="stat-label">Core Language</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">MCP + Studio</span>
+        <span class="stat-label">Workflow</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <p class="section-label">01 / About</p>
+    <h2 class="section-title">Who I am</h2>
+    <p class="about-text">
+      I'm a Roblox developer focused on the backend — the systems that handle data,
+      enforce fairness, and keep games running smoothly at scale. My work spans
+      ProfileService-driven economies, server-authoritative gameplay logic,
+      anti-cheat detection, and networking layers like MemoryStoreService.
+      I care about clean, surgical code: minimal edits, no unnecessary abstraction,
+      and solutions that work reliably under real player load.
+    </p>
+  </section>
+
+  <section class="section" id="skills">
+    <p class="section-label">02 / Skills</p>
+    <h2 class="section-title">What I work with</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>Economy Systems</h3>
+        <p>ProfileService-based data, passive income, offline earnings, prestige loops, and upgrade trees.</p>
+      </div>
+      <div class="skill-card">
+        <h3>Anti-Cheat</h3>
+        <p>Heartbeat monitoring, limb/character integrity checks, exploit detection with live alerting.</p>
+      </div>
+      <div class="skill-card">
+        <h3>Networking</h3>
+        <p>MemoryStoreService, RemoteEvents, server-authoritative validation, and efficient state replication.</p>
+      </div>
+      <div class="skill-card">
+        <h3>Gameplay Logic</h3>
+        <p>Server-fired mechanics, possession/ownership tracking, hitbox detection, and physics-driven tools.</p>
+      </div>
+      <div class="skill-card">
+        <h3>Tooling</h3>
+        <p>Studio-MCP workflows, debugging pipelines, and custom developer utilities for faster iteration.</p>
+      </div>
+      <div class="skill-card">
+        <h3>Data Integrity</h3>
+        <p>Attribute-based state tracking, quest/reward systems, and session-safe progression logic.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="clips">
+    <p class="section-label">03 / Clips</p>
+    <h2 class="section-title">Systems in action</h2>
+    <p class="section-sub">Short clips of backend systems running in live gameplay.</p>
+
+    <div class="clips-grid" id="clipsGrid">
+      <!-- Duplicate this article block for each new clip. Swap the src and caption. -->
+      <article class="clip-card">
+        <div class="clip-video-wrap">
+          <video
+            class="clip-video"
+            controls
+            preload="metadata"
+            poster="https://i.gyazo.com/thumb/1200/61b9a40a46133b22a678fdb3a09e351c-gif.jpg">
+            <source src="https://i.gyazo.com/61b9a40a46133b22a678fdb3a09e351c.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="clip-info">
+          <h3>Backend system demo</h3>
+          <p>Replace this caption with what the clip shows.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="projects">
+    <p class="section-label">04 / Projects</p>
+    <h2 class="section-title">Selected work</h2>
+    <div class="projects-grid">
+      <article class="project-card">
+        <div class="project-top">
+          <span class="project-tag">Live Game</span>
+        </div>
+        <h3>Football / Soccer Game</h3>
+        <p>Server-authoritative GK pipeline, shielding, deflection logic, shot/curl physics, and a client-side anti-cheat system with live Discord alerting.</p>
+        <ul class="project-tags">
+          <li>ProfileService</li>
+          <li>Anti-Cheat</li>
+          <li>Physics</li>
+        </ul>
+      </article>
+      <article class="project-card">
+        <div class="project-top">
+          <span class="project-tag">Live Game</span>
+        </div>
+        <h3>GuessMyPin</h3>
+        <p>Daily quests, gamepasses, streak systems, AFK rewards, and a plot-based idle economy with tiered passive income mechanics.</p>
+        <ul class="project-tags">
+          <li>Economy</li>
+          <li>Attributes</li>
+          <li>UI Systems</li>
+        </ul>
+      </article>
+      <article class="project-card">
+        <div class="project-top">
+          <span class="project-tag">Tool</span>
+        </div>
+        <h3>Roblox FFlag Injector</h3>
+        <p>A C++ tool built with ImGui and DirectX 11 for applying client FFlags directly, including JSON import/export and auto-loop application.</p>
+        <ul class="project-tags">
+          <li>C++</li>
+          <li>ImGui</li>
+          <li>DirectX 11</li>
+        </ul>
+      </article>
+      <article class="project-card">
+        <div class="project-top">
+          <span class="project-tag">Web App</span>
+        </div>
+        <h3>Luau Studio</h3>
+        <p>A web-based Luau analysis platform built in Next.js, with a full lexer, parser, bytecode compiler, and decompiler pipeline.</p>
+        <ul class="project-tags">
+          <li>Next.js</li>
+          <li>Compilers</li>
+          <li>Luau</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="section contact-section" id="contact">
+    <p class="section-label">05 / Contact</p>
+    <h2 class="section-title">Let's work together</h2>
+    <p class="section-sub">Open to backend-focused Roblox collaborations and contract work.</p>
+    <div class="contact-grid">
+      <a href="https://discord.com/users/consznn" target="_blank" rel="noopener noreferrer" class="contact-card">
+        <div class="contact-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19.27 5.33C17.94 4.71 16.5 4.26 15 4a.09.09 0 0 0-.07.03c-.18.33-.39.76-.53 1.09a16.09 16.09 0 0 0-4.8 0c-.14-.34-.35-.76-.54-1.09c-.01-.02-.04-.03-.07-.03c-1.5.26-2.93.71-4.27 1.33c-.01 0-.02.01-.03.02c-2.72 4.07-3.47 8.03-3.1 11.95c0 .02.01.04.03.05c1.8 1.32 3.53 2.12 5.24 2.65c.03.01.06 0 .07-.02c.4-.55.76-1.13 1.07-1.74c.02-.04 0-.08-.04-.09c-.57-.22-1.11-.48-1.64-.78c-.04-.02-.04-.08-.01-.11c.11-.08.22-.17.33-.25c.02-.02.05-.02.07-.01c3.44 1.57 7.15 1.57 10.55 0c.02-.01.05-.01.07.01c.11.09.22.17.33.25c.04.03.03.09-.01.11c-.52.31-1.07.56-1.64.78c-.04.01-.05.06-.04.09c.32.61.68 1.19 1.07 1.74c.03.02.06.03.09.02c1.72-.53 3.45-1.33 5.25-2.65c.02-.01.03-.03.03-.05c.44-4.53-.73-8.46-3.1-11.95c-.01-.01-.02-.02-.04-.02ZM8.52 14.91c-1.03 0-1.89-.95-1.89-2.13c0-1.17.84-2.13 1.89-2.13c1.06 0 1.9.96 1.89 2.13c0 1.18-.83 2.13-1.89 2.13Zm6.97 0c-1.03 0-1.89-.95-1.89-2.13c0-1.17.84-2.13 1.89-2.13c1.06 0 1.9.96 1.89 2.13c0 1.18-.83 2.13-1.89 2.13Z" fill="currentColor"/>
+          </svg>
+        </div>
+        <div>
+          <h3>Discord</h3>
+          <p>consznn</p>
+        </div>
+        <span class="contact-arrow" aria-hidden="true">→</span>
+      </a>
+      <a href="https://www.roblox.com/users/4661072705/profile" target="_blank" rel="noopener noreferrer" class="contact-card">
+        <div class="contact-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 7.3 16.7 3l4.3 13.7L7.3 21 3 7.3Zm5.4 1.86L7 13.78l4.62 1.4l1.4-4.62l-4.62-1.4Z" fill="currentColor"/>
+          </svg>
+        </div>
+        <div>
+          <h3>Roblox</h3>
+          <p>connquerr</p>
+        </div>
+        <span class="contact-arrow" aria-hidden="true">→</span>
+      </a>
+      <a href="https://github.com/consznn" target="_blank" rel="noopener noreferrer" class="contact-card">
+        <div class="contact-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C6.48 2 2 6.58 2 12.2c0 4.49 2.87 8.3 6.84 9.64c.5.1.68-.22.68-.49c0-.24-.01-1.05-.01-1.9c-2.78.62-3.37-1.21-3.37-1.21c-.45-1.18-1.11-1.49-1.11-1.49c-.91-.64.07-.63.07-.63c1 .07 1.53 1.05 1.53 1.05c.89 1.56 2.34 1.11 2.91.85c.09-.66.35-1.11.63-1.37c-2.22-.26-4.55-1.14-4.55-5.06c0-1.12.39-2.03 1.03-2.75c-.1-.26-.45-1.31.1-2.73c0 0 .84-.27 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05c.55 1.42.2 2.47.1 2.73c.64.72 1.03 1.63 1.03 2.75c0 3.93-2.34 4.8-4.57 5.05c.36.32.68.94.68 1.9c0 1.37-.01 2.48-.01 2.81c0 .27.18.6.69.49A10.02 10.02 0 0 0 22 12.2C22 6.58 17.52 2 12 2Z" fill="currentColor"/>
+          </svg>
+        </div>
+        <div>
+          <h3>GitHub</h3>
+          <p>consznn</p>
+        </div>
+        <span class="contact-arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>© <span id="year"></span> connquerr — Roblox Backend Developer</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
